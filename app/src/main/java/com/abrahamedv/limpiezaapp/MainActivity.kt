@@ -1,4 +1,4 @@
-package com.example.limpiezaapp
+package com.abrahamedv.limpiezaapp
 
 import android.os.Bundle
 import com.google.android.material.snackbar.Snackbar
@@ -13,7 +13,7 @@ import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import android.view.Menu
 import android.view.MenuItem
-import com.example.limpiezaapp.databinding.ActivityMainBinding
+import com.abrahamedv.limpiezaapp.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 

@@ -1,4 +1,4 @@
-package com.example.limpiezaapp
+package com.abrahamedv.limpiezaapp
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
-import com.example.limpiezaapp.databinding.FragmentFirstBinding
+import com.abrahamedv.limpiezaapp.databinding.FragmentFirstBinding
 
 /**
  * A simple [Fragment] subclass as the default destination in the navigation.

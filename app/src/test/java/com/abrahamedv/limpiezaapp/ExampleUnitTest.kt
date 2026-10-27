@@ -1,4 +1,4 @@
-package com.example.limpiezaapp
+package com.abrahamedv.limpiezaapp
 
 import org.junit.Test
 

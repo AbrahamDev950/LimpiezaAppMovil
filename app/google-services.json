@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "867531655101",
+    "project_id": "limpiezaapp-7abdc",
+    "storage_bucket": "limpiezaapp-7abdc.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:867531655101:android:43c8027104fd57a457f4d4",
+        "android_client_info": {
+          "package_name": "com.abrahamedv.limpiezaapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDhxjmGzKyRfXu800a9O8d6ZcOsWARfp3M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
