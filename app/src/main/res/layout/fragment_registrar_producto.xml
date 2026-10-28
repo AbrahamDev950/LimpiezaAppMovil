@@ -1,6 +1,113 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#F3F7F2"
+    android:fillViewport="true">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nuevo producto"
+            android:textColor="#245C3A"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="24dp"
+            android:text="Registra un nuevo producto."
+            android:textColor="#607064"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nombre del producto"
+            android:textColor="#26352A"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/editNombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:hint="Ej. Cloro"
+            android:inputType="textCapSentences"
+            android:minHeight="52dp"
+            android:padding="12dp" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Precio por unidad ($)"
+            android:textColor="#26352A"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/editPrecio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:hint="Ej. 25.50"
+            android:inputType="numberDecimal"
+            android:minHeight="52dp"
+            android:padding="12dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Existencia"
+            android:textColor="#26352A"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/editExistencia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:hint="Ej. 50"
+            android:inputType="number"
+            android:minHeight="52dp"
+            android:padding="12dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Unidad de medida"
+            android:textColor="#26352A"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/editUnidad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:hint="Ej. Litro, pieza, kilogramo"
+            android:inputType="textCapSentences"
+            android:minHeight="52dp"
+            android:padding="12dp" />
+
+        <Button
+            android:id="@+id/buttonGuardarProducto"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="80dp"
+            android:backgroundTint="#287747"
+            android:text="Guardar producto"
+            android:textColor="#FFFFFF" />
+
+    </LinearLayout>
+</ScrollView>

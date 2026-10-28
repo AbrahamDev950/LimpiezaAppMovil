@@ -15,6 +15,8 @@ import com.google.firebase.auth.FirebaseAuth
 import com.abrahamedv.limpiezaapp.models.Producto
 import com.abrahamedv.limpiezaapp.services.ProductoService
 import com.abrahamedv.limpiezaapp.services.AuthService
+import androidx.navigation.fragment.findNavController
+import com.abrahamedv.limpiezaapp.R
 class FirstFragment : Fragment() {
 
     private var _binding: FragmentFirstBinding? = null
@@ -39,15 +41,9 @@ class FirstFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // Acción temporal del botón.
         binding.buttonAgregarProducto.setOnClickListener {
-            Toast.makeText(
-                requireContext(),
-                "Aquí registraremos un producto",
-                Toast.LENGTH_SHORT
-            ).show()
+            findNavController().navigate(R.id.registrarProductoFragment)
         }
-
         authService.autenticarAnonimamente(
             alCompletar = {
                 if (!isAdded || _binding == null) {
