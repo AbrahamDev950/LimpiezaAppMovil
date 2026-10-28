@@ -1,7 +1,8 @@
 
 package com.abrahamedv.limpiezaapp.services
 import com.abrahamedv.limpiezaapp.models.Producto
-
+import android.util.Log
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 
 class ProductoService {
@@ -17,6 +18,22 @@ class ProductoService {
         alCompletar: (List<Producto>) -> Unit,
         alError: (Exception) -> Unit
     ) {
+        val auth = FirebaseAuth.getInstance()
+
+        Log.d(
+            "EcoCleanFirebase",
+            "Firestore: app=${db.app.name}, proyecto=${db.app.options.projectId}"
+        )
+
+        Log.d(
+            "EcoCleanFirebase",
+            "Auth: app=${auth.app.name}, proyecto=${auth.app.options.projectId}"
+        )
+
+        Log.d(
+            "EcoCleanFirebase",
+            "UID actual: ${auth.currentUser?.uid}"
+        )
         coleccion.get()
             .addOnSuccessListener { resultado ->
                 val productos = resultado.documents.mapNotNull { documento ->
@@ -28,6 +45,12 @@ class ProductoService {
                 alCompletar(productos)
             }
             .addOnFailureListener { error ->
+                Log.e(
+                    "EcoCleanFirebase",
+                    "Error al consultar productos",
+                    error
+                )
+
                 alError(error)
             }
     }
@@ -38,11 +61,11 @@ class ProductoService {
         alError: (Exception) -> Unit
     ) {
         val datos = hashMapOf(
-            "nombre" to producto.nombre,
-            "precio" to producto.precio,
-            "existencia" to producto.existencia,
-            "unidad" to producto.unidad,
-            "activo" to producto.activo
+            "Nombre" to producto.Nombre,
+            "Precio" to producto.Precio,
+            "Existencia" to producto.Existencia,
+            "Unidad" to producto.Unidad,
+            "Activo" to producto.Activo
         )
 
         coleccion.add(datos)

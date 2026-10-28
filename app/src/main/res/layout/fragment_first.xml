@@ -19,6 +19,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:rotation="0"
+            android:rotationY="0"
             android:text="LimpiezaApp"
             android:textColor="#246B45"
             android:textSize="30sp"
@@ -109,16 +111,26 @@
             android:textSize="20sp"
             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/textEstadoProductos"
+
+        <LinearLayout
+            android:id="@+id/contenedorProductos"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            android:background="#FFFFFF"
-            android:padding="18dp"
-            android:text="Aquí aparecerán tus productos de limpieza."
-            android:textColor="#66756A"
-            android:textSize="14sp" />
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textEstadoProductos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:padding="18dp"
+                android:text="Cargando productos..."
+                android:textColor="#66756A"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
 
     </LinearLayout>
 
